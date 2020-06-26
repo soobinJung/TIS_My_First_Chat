@@ -41,13 +41,11 @@ public class Chatting_TableData extends AbstractTableModel{
    // id È®ÀÎ¿ë
    public String idCheck( String id, String pass ) {
       
-      // 0 1 2 3 4
       for(Chatting_Transaction t : list){
          
          if((t.getID().equals(id) == true) && (t.getPassword().equals(pass) == true)) {
 
                return t.getcCharac();
-               
          }
       }
 

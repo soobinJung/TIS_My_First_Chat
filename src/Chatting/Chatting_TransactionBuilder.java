@@ -1,6 +1,5 @@
 package Chatting;
 
-// Chatting_Transaction class 에 좀 더 깔끔하게 데이터를 업로드 할 수 있도록 해주는 class
 
 public class Chatting_TransactionBuilder {
 	   

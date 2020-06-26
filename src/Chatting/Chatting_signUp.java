@@ -170,7 +170,7 @@ public class Chatting_signUp implements ActionListener{
         //Save를 누르면 정보 저장
         btn_save.addActionListener(this);
         
-        //캐릭터선택=========================================
+        //캐릭터선택
         selChar();
         
         lblCharacter = new JLabel("Character");
@@ -223,27 +223,25 @@ public class Chatting_signUp implements ActionListener{
            if(!fileExists){
             fw.append("ID, PASS, CHARACTER, GENDAR\n");
          }
-           
-           // if (ob == btn_save) {
-                String idTxt = textField_id.getText();
-                String passTxt = PasswordField_pw.getText();
-                String characterTxt = (String) ComChar.getSelectedItem();
-                String getderTxt    = (String) Gender.getSelectedItem();
-                fw.append(idTxt + "," + passTxt + "," + characterTxt + "," + getderTxt + "\n");
-                // 초기화
-                textField_id.setText("");
-                PasswordField_pw.setText("");
-                ComChar.setSelectedIndex(0);
-                Gender.setSelectedIndex(0);
-                JOptionPane.showMessageDialog(null, "Data Saved Successfully");
-                fw.close();
-          // }
+
+              String idTxt = textField_id.getText();
+              String passTxt = PasswordField_pw.getText();
+              String characterTxt = (String) ComChar.getSelectedItem();
+              String getderTxt    = (String) Gender.getSelectedItem();
+              fw.append(idTxt + "," + passTxt + "," + characterTxt + "," + getderTxt + "\n");
+              // 초기화
+              textField_id.setText("");
+              PasswordField_pw.setText("");
+              ComChar.setSelectedIndex(0);
+              Gender.setSelectedIndex(0);
+              JOptionPane.showMessageDialog(null, "Data Saved Successfully");
+              fw.close();
+       
       } catch (Exception e2) {
          JOptionPane.showMessageDialog(null, "There was an error while writing the data");
       }
        
-         // 입력 받아서 Vector에 저장
-         //vector.add(new Chatting_info(idTxt, passTxt, characterTxt, getderTxt));
+        
          JOptionPane.showMessageDialog(null, "Your data has been saved successfully");
          
             frame.setVisible(false);

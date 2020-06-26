@@ -59,7 +59,7 @@ public class GUIChatServer extends JFrame implements ActionListener{
 				
 				ChatHandle ch=new ChatHandle(this,sock);
 				user.addElement(ch); 
-				ch.start();     //startServer()바로 위에 inwon=new Vector(); 
+				ch.start();    
 			}
 		}catch(IOException e){	}
 	}  //end
